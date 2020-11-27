@@ -8,3 +8,6 @@ class TestSong(unittest.TestCase):
 
     def test_song_has_title(self):
         self.assertEqual("The Parting Glass", self.song.title)
+
+    def test_song_has_artist(self):
+        self.assertEqual("The Pogues", self.song.artist)
