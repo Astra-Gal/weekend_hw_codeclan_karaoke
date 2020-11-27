@@ -11,3 +11,6 @@ class TestSong(unittest.TestCase):
 
     def test_song_has_artist(self):
         self.assertEqual("The Pogues", self.song.artist)
+
+    def test_song_has_duration(self):
+        self.assertEqual(2.17, self.song.duration)
