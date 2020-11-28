@@ -10,3 +10,6 @@ class TestRoom(unittest.TestCase):
 
     def test_room_has_name(self):
         self.assertEqual("Wannabe", self.room_1.name)
+
+    def test_room_has_capacity(self):
+        self.assertEqual(10, self.room_1.capacity)
