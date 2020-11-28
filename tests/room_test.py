@@ -18,5 +18,7 @@ class TestRoom(unittest.TestCase):
     def test_check_room_capacity(self):
         self.assertEqual(0, self.room_1.check_capacity())
 
-    # def test_room_can_check_in_guest(self):
-    #     self.room_1.check_in_guest(self.guest_1)
+    def test_room_can_check_in_guest(self):
+        self.room_1.check_in_guest(self.guest_1)
+        self.assertEqual(1, self.room_1.check_capacity())
+

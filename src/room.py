@@ -9,3 +9,6 @@ class Room:
     
     def check_capacity(self):
         return len(self.guests)
+
+    def check_in_guest(self, guest):
+        self.guests.append(guest)
