@@ -5,3 +5,7 @@ class Room:
         self.capacity = capacity
         self.guests = []
         self.playlist = []
+
+    
+    def check_capacity(self):
+        return len(self.guests)
