@@ -9,8 +9,8 @@ class TestGuest(unittest.TestCase):
     def setUp(self):
         self.guest = Guest("Shane MacGowan", 62, 100.00, 3)
 
-        self.room_1 = Room("Wannabe", 10)
-        self.room_2 = Room("Simply The Best", 3)
+        self.room_1 = Room("Wannabe", 10, 10.00)
+        self.room_2 = Room("Simply The Best", 3, 30.00)
 
         self.song_1 = Song("The Parting Glass", "The Pogues", "Messy Folk-Punk", 2.17)
         self.song_2 = Song("Song 2", "Blur", "Indie", 2.02)

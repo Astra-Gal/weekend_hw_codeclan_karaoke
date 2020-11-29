@@ -6,8 +6,8 @@ from src.song import Song
 
 class TestRoom(unittest.TestCase):
     def setUp(self):
-        self.room_1 = Room("Wannabe", 10)
-        self.room_2 = Room("Simply The Best", 3)
+        self.room_1 = Room("Wannabe", 10, 10.00)
+        self.room_2 = Room("Simply The Best", 3, 30.00)
 
         self.guest_1 = Guest("Shane MacGowan", 62, 100.00, 3)
         self.guest_2 = Guest("Tina Turner", 81, 50.00, 9)
@@ -58,3 +58,9 @@ class TestRoom(unittest.TestCase):
         self.room_1.add_song_to_playlist(self.song_2)
         self.room_1.add_song_to_play_next(self.song_1)
         self.assertEqual(self.song_1, self.room_1.playlist[0])
+
+    def test_can_guest_afford_entry__returns_true(self):
+        self.assertEqual(True, self.room_1.can_afford_entry(self.guest_1))
+        
+    def test_can_guest_afford_entry__returns_false(self):
+        self.assertEqual(False, self.room_2.can_afford_entry(self.guest_6))

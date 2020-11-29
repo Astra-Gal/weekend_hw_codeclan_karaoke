@@ -1,8 +1,9 @@
 class Room:
 
-    def __init__(self, name, capacity):
+    def __init__(self, name, capacity, entry_fee):
         self.name = name
         self.capacity = capacity
+        self.entry_fee = entry_fee
         self.guests = []
         self.playlist = []
 
@@ -27,3 +28,6 @@ class Room:
 
     def add_song_to_play_next(self, song):
         self.playlist[:0] = [song]
+
+    def can_afford_entry(self, guest):
+        return guest.wallet >= self.entry_fee
