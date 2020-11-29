@@ -24,3 +24,6 @@ class Room:
 
     def add_song_to_playlist(self, song):
         self.playlist.append(song)
+
+    def add_song_to_play_next(self, song):
+        self.playlist[:0] = [song]

@@ -50,6 +50,11 @@ class TestRoom(unittest.TestCase):
     def test_guest_is_old_enough__returns_false(self):
         self.assertEqual(False, self.room_1.guest_is_old_enough(self.guest_5))
  
-    def test_guest_can_add_song_to_playlist(self):
+    def test_can_add_song_to_playlist(self):
         self.room_1.add_song_to_playlist(self.song_2)
         self.assertEqual(1, self.room_1.playlist_length())
+
+    def test_can_add_song_to_play_next(self):
+        self.room_1.add_song_to_playlist(self.song_2)
+        self.room_1.add_song_to_play_next(self.song_1)
+        self.assertEqual(self.song_1, self.room_1.playlist[0])
