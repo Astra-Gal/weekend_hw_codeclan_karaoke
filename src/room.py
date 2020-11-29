@@ -18,3 +18,9 @@ class Room:
 
     def guest_is_old_enough(self, guest):
         return guest.age >= 18
+
+    def playlist_length(self):
+        return len(self.playlist)
+
+    def add_song_to_playlist(self, song):
+        self.playlist.append(song)
