@@ -36,3 +36,8 @@ class TestRoom(unittest.TestCase):
         self.room_2.check_in_guest(self.guest_4)
         self.assertEqual("Sorry! Over Capacity", self.room_2.check_in_guest(self.guest_4))
 
+    def test_guest_is_old_enough__returns_true(self):
+        self.assertEqual(True, self.room_1.guest_is_old_enough(self.guest_1))
+
+    def test_guest_is_old_enough__returns_false(self):
+        self.assertEqual(False, self.room_1.guest_is_old_enough(self.guest_5))

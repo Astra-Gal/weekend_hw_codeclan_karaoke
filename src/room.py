@@ -15,3 +15,6 @@ class Room:
             self.guests.append(guest)
         else:
             return "Sorry! Over Capacity"
+
+    def guest_is_old_enough(self, guest):
+        return guest.age >= 18
