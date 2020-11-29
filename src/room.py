@@ -11,4 +11,7 @@ class Room:
         return len(self.guests)
 
     def check_in_guest(self, guest):
-        self.guests.append(guest)
+        if len(self.guests) < self.capacity:
+            self.guests.append(guest)
+        else:
+            return "Sorry! Over Capacity"
