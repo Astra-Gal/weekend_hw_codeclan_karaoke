@@ -64,3 +64,8 @@ class TestRoom(unittest.TestCase):
         
     def test_can_guest_afford_entry__returns_false(self):
         self.assertEqual(False, self.room_2.can_afford_entry(self.guest_6))
+
+    def test_find_song_by_title_in_playlist__returns_song(self):
+        self.room_1.add_song_to_playlist(self.song_1)
+        self.room_1.find_song_by_title_in_playlist("The Parting Glass")
+        self.assertEqual(self.song_1, self.room_1.playlist[0])

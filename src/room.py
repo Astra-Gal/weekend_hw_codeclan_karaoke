@@ -31,3 +31,10 @@ class Room:
 
     def can_afford_entry(self, guest):
         return guest.wallet >= self.entry_fee
+
+    def find_song_by_title_in_playlist(self, song):
+        for song in self.playlist:
+            if song.title == song:
+                return song
+            else:
+                return "Song not found"         
